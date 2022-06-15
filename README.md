@@ -1,2 +1,2 @@
 # Petfriends
-Тесты на питне для сайта Petfriends
+Тесты на питоне для сайта Petfriends
