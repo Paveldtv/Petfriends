@@ -4,8 +4,6 @@ Introduction
 This repository contains basic example of usage PageObject
 pattern with Selenium and Python (PyTest + Selenium).
 
-Video screencast with the description ot this code:
-https://www.youtube.com/watch?v=BRxp1Kn1G7w
 
 
 Files
@@ -18,7 +16,7 @@ of the page in case any test case will fail.
 
 [pages/elements.py](pages/elements.py) contains helper class to define web elements on web pages.
 
-[tests/test_smoke_yandex_market.py](tests/test_smoke_yandex_market.py) contains several smoke Web UI tests for YandexMarket (https://market.yandex.ru/)
+[tests/test.py](tests/test.py) contains several smoke Web UI tests for Yandex (https://yandex.ru/)
 
 
 How To Run Tests
@@ -38,7 +36,6 @@ How To Run Tests
     python3 -m pytest -v --driver Chrome --driver-path ~/chrome tests/*
     ```
 
-   ![alt text](example.png)
 
 Note:
 ~/chrome in this example is the file of Selenium WebDriver downloaded and unarchived on step #2.
