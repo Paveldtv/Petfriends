@@ -1,44 +1,24 @@
-Introduction
-------------
+¬ведение
+Ётот репозиторий содержит базовый пример использовани€ шаблона PageObject с Selenium и Python (PyTest + Selenium).
 
-This repository contains basic example of usage PageObject
-pattern with Selenium and Python (PyTest + Selenium).
+‘айлы
+conftest.py содержит весь необходимый код дл€ обнаружени€ неудачных тестовых примеров и создани€ скриншота страницы на случай, если какой-либо тестовый пример завершитс€ неудачей.
 
-Video screencast with the description ot this code:
-https://www.youtube.com/watch?v=BRxp1Kn1G7w
+pages/base.py содержит реализацию шаблона PageObject дл€ Python.
 
+pages/elements.py содержит вспомогательный класс дл€ определени€ веб-элементов на веб-страницах.
 
-Files
------
+tests/test.py содержит несколько тестов пользовательского интерфейса Smoke Web дл€ Wildberries (https://www.wildberries.ru /)
 
-[conftest.py](conftest.py) contains all the required code to catch failed test cases and make screenshot
-of the page in case any test case will fail.
+ ак запускать тесты
+”становите все требовани€:
 
-[pages/base.py](pages/base.py) contains PageObject pattern implementation for Python.
+требовани€ к установке pip3 -r
+—качать Selenium WebDriver с https://chromedriver.chromium.org/downloads (выберите версию, совместимую с вашим браузером)
 
-[pages/elements.py](pages/elements.py) contains helper class to define web elements on web pages.
+«апускайте тесты:
 
-[tests/test_smoke_yandex_market.py](tests/test_smoke_yandex_market.py) contains several smoke Web UI tests for YandexMarket (https://market.yandex.ru/)
+python3 -m pytest -v --driver Chrome --driver-path ~/тесты chrome/*
+¬ некоторых тестах курсор мыши должен находитьс€ за пределами окна браузера.
 
-
-How To Run Tests
-----------------
-
-1) Install all requirements:
-
-    ```bash
-    pip3 install -r requirements
-    ```
-
-2) Download Selenium WebDriver from https://chromedriver.chromium.org/downloads (choose version which is compatible with your browser)
-
-3) Run tests:
-
-    ```bash
-    python3 -m pytest -v --driver Chrome --driver-path ~/chrome tests/*
-    ```
-
-   ![alt text](example.png)
-
-Note:
-~/chrome in this example is the file of Selenium WebDriver downloaded and unarchived on step #2.
+ѕримечание: ~/chrome в этом примере представл€ет собой файл Selenium WebDriver, загруженный и разархивированный на шаге #2.
